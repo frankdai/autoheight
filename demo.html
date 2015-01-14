@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Height</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.1/normalize.css">
+    <script src="autoheight.js"></script>
+    <style type="text/css">
+    div {
+        box-sizing:border-box;
+        margin-bottom: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="div1 autoheight" style="width:20%;background:#ddd;border:5px solid black;">First Div</div>
+    <div class="div2 autoheight" data-autoheightratio="1" data-includingborder="false" style="width:20%;background:#999;border:5px solid black;">Second Div</div>
+    <div id="div3" style="width:30%;background:#555;border:5px solid black;">Third Div</div>
+    <div id="div4" style="width:30%;background:#222;border:5px solid black;">Fourth Div</div>
+    <script type="text/javascript">
+    AutoHeight();
+    var div3=new AutoHeight(document.getElementById('div3'));
+    var div4=new AutoHeight(document.getElementById('div4'));
+    div3.controlHeight();
+    div4.controlHeight(0.4,false);
+    window.addEventListener('resize',function(){
+        AutoHeight();
+        div3.controlHeight();
+        div4.controlHeight(0.4,false);
+    },true);
+    </script>
+</body>
+</html>
