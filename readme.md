@@ -1,6 +1,8 @@
 # AutoHeight.js
 
-This is a very small function/plugin which is used for controlling element height in order to keep the element "asepct ratio" when the width is variable across device and changable by the user, i.e. in mobile browser.
+This is a very small function/plugin which is used for controlling element height in order to keep the element "asepct ratio" when the width is variable across device and changable by the user, i.e. in mobile browser. 
+
+[ Checkout The Demo ](http://frankdai.github.io/autoheight/demo.html)
 
 To use this plugin, simply put the code inside your JS file (it is only 29 lines uncompressed) and call that plugin in two ways: 
 
