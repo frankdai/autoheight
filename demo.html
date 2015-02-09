@@ -18,12 +18,19 @@
     <div class="div2 autoheight" data-autoheightratio="1" data-includingborder="false" style="width:20%;background:#999;border:5px solid black;">Second Div</div>
     <div id="div3" style="width:30%;background:#555;border:5px solid black;">Third Div</div>
     <div id="div4" style="width:30%;background:#222;border:5px solid black;">Fourth Div</div>
+    <div class="at" style="width:30%;background:slategrey;border:5px solid black;"></div>
+    <div class="at" style="width:30%;background:slategrey;border:5px solid black;"></div>
+    <div class="at" style="width:30%;background:slategrey;border:5px solid black;"></div>
     <script type="text/javascript">
     AutoHeight();
     var div3=new AutoHeight(document.getElementById('div3'));
     var div4=new AutoHeight(document.getElementById('div4'));
     div3.controlHeight();
     div4.controlHeight(0.4,false);
+    var at=new AutoHeight(document.getElementsByClassName('at'));
+    at[0].controlHeight();
+    at[1].controlHeight(0.6,false);
+    at[2].controlHeight(0.8,true);
     window.addEventListener('resize',function(){
         AutoHeight();
         div3.controlHeight();
